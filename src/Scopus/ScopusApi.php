@@ -25,6 +25,18 @@ class ScopusApi
      * SearchApi constructor.
      * @param string $apiKey
      * @param float $timeout
+     *
+     * @todo: Alter this to accept an http client parameter, and/or to allow for proxy specification
+     *'request.options' => array(
+     *  'headers' => array (
+     *                    'Accept' => 'application/json',
+     *                ),
+     *                'proxy' => [
+     *                    'http' => 'wwwproxy.yourdomain.com:80',
+     *                    'https' => 'wwwproxy.yourdomain.com:80',
+     *                    'no' => ['localhost', '127.0.0.1']
+     *                ],
+     *            )
      */
     public function __construct($apiKey, $timeout = self::TIMEOUT)
     {
